@@ -1,0 +1,45 @@
+.main-header{
+	text-align: center;
+	color: $header-text-color;
+	background: linear-gradient($global-pink-color, $global-orange-color);	
+	padding-top: calc(10rem + #{$nav-height});
+	padding-bottom: 10rem;
+	position: relative;
+	overflow: hidden;
+
+	@include smaller-desktop{
+		padding-top: calc(8rem + #{$nav-height});
+		padding-bottom: 8rem;
+	}
+
+	.header-wrapper{
+		position: relative;
+		z-index: 1;
+
+		h1, h2{
+			margin: 0;
+			line-height: 1.2;
+		}
+
+		h1{
+			font-size: 6rem;
+
+			@include smaller-desktop{
+				font-size: 4em;
+			}
+		}
+
+		h2{
+			font-size: 4rem;
+
+			@include smaller-desktop{
+				font-size: 2em;
+			}
+		}
+
+		.fancy-button{
+			margin-top: 2rem;
+			display: inline-block;
+		}
+	}
+}

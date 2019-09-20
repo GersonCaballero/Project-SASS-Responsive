@@ -1,0 +1,105 @@
+@keyframes upMovementCircle{
+	from{
+		margin-top: 800px;
+	}
+
+	to{
+		margin-top: -600px;
+	}
+}
+
+@keyframes upMovementBiggerCircle{
+	0%{
+		margin-bottom: -1000px;
+	}
+
+	100%{
+		margin-bottom: 100em;
+	}
+}
+
+@keyframes upMovementBigCircle{
+	from{
+		margin-top: calc(800px + 22em + 8em);
+	}
+
+	to{
+		margin-top: -800px;
+	}
+}
+
+
+
+@keyframes upMovementSmallCircle{
+	0%{
+		margin-bottom: calc(-800px - 7em);
+	}
+
+	100%{
+		margin-bottom: 800px;
+	}
+}
+
+@keyframes sidesLeft{
+	from{
+		margin-left: -100px;
+	}
+
+	to{
+		margin-left: 100px;
+	}
+}
+
+@keyframes sidesRight{
+	from{
+		margin-right: -100px;
+	}
+
+	to{
+		margin-right: 100px;
+	}
+}
+
+.fancy-circle-bigger{
+	@include compose-circle();
+	width: 90em;
+	height: 90em;
+	left: -55em;
+    bottom: -55em;
+    animation: upMovementBiggerCircle 35s linear infinite, sidesLeft 6s ease-in-out infinite alternate;
+    
+    @media (max-width: 768px){
+    	width: 60em;
+		height: 60em;
+    }
+}
+
+.fancy-circle-big{
+	@include compose-circle(){
+		width: 45em;
+		height: 45em;
+		right: -22em;
+	    top: -22em;
+	    animation: upMovementBigCircle 30s linear infinite, sidesRight 5s ease-in-out infinite alternate;
+	}
+}
+
+.fancy-circle{
+	@include compose-circle(){
+		width: 25em;
+		height: 25em;
+		right: 35%;
+	    top: -5em;
+	    animation: upMovementCircle 15s linear infinite, sidesRight 3s ease-in-out infinite alternate;
+	}
+}
+
+.fancy-circle-small{
+	@include compose-circle();
+
+	width: 15em;
+	height: 15em;
+	right: 6em;
+    bottom: -7em;
+    animation: upMovementSmallCircle 12s linear infinite, sidesRight 2s ease-in-out infinite alternate;
+}

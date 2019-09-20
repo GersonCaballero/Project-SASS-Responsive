@@ -1,0 +1,36 @@
+@font-face{
+	font-family: Catamaran;
+	src: url("../fonts/Catamaran-Regular.ttf");
+}
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Catamaran, "sans-serif", verdana;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.container{
+	width: 75%;
+	margin: 0 auto;
+}
+
+.navigation-link{
+	color: transparentize($nav-text-color, 0.5);
+	font-size: 0.7em;
+
+	&:hover{
+		color: $nav-text-color;
+	}
+}

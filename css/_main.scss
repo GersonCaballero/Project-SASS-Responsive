@@ -1,0 +1,65 @@
+.main-container{
+	position: relative;
+	z-index: 1;
+	background: $main-bg;
+
+	.section-wrapper{
+		display: flex;
+		align-items: center;
+		padding: 5em 5em 2em 5em;
+
+		@include smaller-desktop{
+			flex-wrap: wrap;
+			padding-top: 3em;
+		}
+
+		&.section-reverse{
+			.section-text{
+				order: 2;
+				margin-right: 0;
+			}
+
+			.section-image{
+				order: 1;
+				margin-right: 8em;
+
+				@include smaller-desktop{
+					margin-right: 0;
+				}
+			}
+		}
+
+		.section-text{
+			flex: 1 1 50%;
+    		margin-right: 8em;
+
+    		@include smaller-desktop{
+				order: 2;
+				margin-right: 0;
+				flex: 1 1 100%;
+				margin-top: 3em;
+			}
+
+    		h2{
+    			font-size: 3em;
+			    font-weight: bolder;
+			    line-height: 1.2;
+    		}
+		}
+
+		.section-image{
+			flex: 1 1 50%;
+    		text-align: center;
+
+    		@include smaller-desktop{
+				order: 1;
+				flex: 1 1 100%;
+			}
+
+    		img{
+    			width: 100%;
+    			border-radius: 100%;
+    		}
+		}
+	}
+}

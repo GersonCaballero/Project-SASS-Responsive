@@ -1,0 +1,11 @@
+.fancy-button{
+	border-radius: 5rem;
+	padding: 1.5rem 4.5rem;
+	background: $global-pink-color;
+	color: $fancy-button-text-color;
+	font-size: 1.5rem;
+
+	&:hover{
+		background: darken($global-pink-color, 5);
+	}
+}
